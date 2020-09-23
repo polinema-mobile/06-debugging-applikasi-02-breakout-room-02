@@ -79,4 +79,82 @@ public class TesKlikButton {
         onView(withId(R.id.button_equal)).perform(click());
         onView(withId(R.id.output)).check(matches(withText("0")));
     }
+    @Test
+    public void tesKlikButtonClear(){
+        onView(withId(R.id.button7)).perform(click());
+        onView(withId(R.id.button_clear)).perform(click());
+        onView(withId(R.id.button6)).perform(click());
+        onView(withId(R.id.button_sub)).perform(click());
+        onView(withId(R.id.button1)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("5")));
+    }
+    @Test
+    public void tesKlikButtonTitikKoma() {
+        onView(withId(R.id.button7)).perform(click());
+        onView(withId(R.id.button_dot)).perform(click());
+        onView(withId(R.id.button0)).perform(click());
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.button1)).perform(click());
+        onView(withId(R.id.button_dot)).perform(click());
+        onView(withId(R.id.button2)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("8.2")));
+    }
+    @Test
+    public void tesKlikButtonKurangDuaOperasi() {
+        onView(withId(R.id.button5)).perform(click());
+        onView(withId(R.id.button_sub)).perform(click());
+        onView(withId(R.id.button1)).perform(click());
+        onView(withId(R.id.button_sub)).perform(click());
+        onView(withId(R.id.button1)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("3")));
+    }
+    @Test
+    public void tesKlikButtonTambahDuaOperasi() {
+        onView(withId(R.id.button5)).perform(click());
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.button2)).perform(click());
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.button1)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("8")));
+    }
+    @Test
+    public void tesKlikButtonBagiDuaOperasi() {
+        onView(withId(R.id.button8)).perform(click());
+        onView(withId(R.id.button_divide)).perform(click());
+        onView(withId(R.id.button2)).perform(click());
+        onView(withId(R.id.button_divide)).perform(click());
+        onView(withId(R.id.button2)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("2")));
+    }
+    @Test
+    public void tesKlikButtonKaliDuaOperasi() {
+        onView(withId(R.id.button1)).perform(click());
+        onView(withId(R.id.button_multi)).perform(click());
+        onView(withId(R.id.button0)).perform(click());
+        onView(withId(R.id.button_multi)).perform(click());
+        onView(withId(R.id.button2)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("0")));
+    }
+    @Test
+    public void tesKlikButtonTitikKomaDua() {
+        onView(withId(R.id.button7)).perform(click());
+        onView(withId(R.id.button_dot)).perform(click());
+        onView(withId(R.id.button0)).perform(click());
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.button1)).perform(click());
+        onView(withId(R.id.button_dot)).perform(click());
+        onView(withId(R.id.button2)).perform(click());
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.button1)).perform(click());
+        onView(withId(R.id.button_dot)).perform(click());
+        onView(withId(R.id.button3)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("9.5")));
+    }
 }
