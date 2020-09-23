@@ -34,7 +34,6 @@ public class TesKlikButton {
         onView(withId(R.id.button0)).perform(click());
         onView(withId(R.id.input)).check(matches(withText("1234567890")));
     }
-<<<<<<<HEAD
 
     @Test
     public void tesKlikButtonTambah() {
