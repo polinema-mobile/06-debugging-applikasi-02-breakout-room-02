@@ -157,4 +157,21 @@ public class TesKlikButton {
         onView(withId(R.id.button_equal)).perform(click());
         onView(withId(R.id.output)).check(matches(withText("9.5")));
     }
+    @Test
+    public void tesKlikButtonPersen() {
+        onView(withId(R.id.button1)).perform(click());
+        onView(withId(R.id.button_para1)).perform(click());
+        onView(withId(R.id.button0)).perform(click());
+        onView(withId(R.id.button_multi)).perform(click());
+        onView(withId(R.id.button2)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("0")));
+    }
+
+    @Test
+    public void tesKlikButtonPara2() {
+        onView(withId(R.id.button8)).perform(click());
+        onView(withId(R.id.button_para2)).perform(click());
+        onView(withId(R.id.output)).check(matches(withText("-8")));
+    }
 }
